@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: books-api-app
+  name: books-api-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+        app: books-api-app
+  template:
+    metadata:
+        labels:
+            app: books-api-app
+    spec:
+      containers:
+      - name: books-api-app
+        image: books-api-app:latest
+        imagePullPolicy: "IfNotPresent"
+        ports:
+        - containerPort: 5035
