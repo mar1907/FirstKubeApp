@@ -5,7 +5,7 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-API_KEY = "AIzaSyAFGTZA7vCirJuaekd-9uh4Rm1Ne9wKR1o"
+API_KEY = ""
 APPLICATION_NAME = "sm-sd2/1.0"
 
 URL = "https://www.googleapis.com/books/v1/volumes"
