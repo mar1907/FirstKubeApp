@@ -8,5 +8,5 @@ spec:
   capacity:
     storage: 1G  
   hostPath:
-    path: /tmp/books-pv
+    path: /data/booksapi
 

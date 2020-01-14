@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: books-client-api-app
+  name: books-client-api-app
+spec:
+  type: NodePort
+  ports:
+  - port: 5040
+  selector:
+    app: books-client-api-app

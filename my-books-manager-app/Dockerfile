@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /booksfrontend/src
 
 ENV APP_ENV development
-ENV apiURL=IP:PORT
+ENV apiURL=http://192.168.99.100:30103
 
 EXPOSE 5040
 

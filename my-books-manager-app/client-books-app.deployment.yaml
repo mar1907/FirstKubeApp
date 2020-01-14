@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: books-client-api-app
+  name: books-client-api-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+        app: books-client-api-app
+  template:
+    metadata:
+        labels:
+            app: books-client-api-app
+    spec:
+      volumes:
+      - name: books-vol
+        persistentVolumeClaim:
+          claimName: books-pvc
+      containers:
+      - name: books-client-api-app
+        image: books-manager-app:latest
+        imagePullPolicy: "IfNotPresent"
+        ports:
+        - containerPort: 5040
+        volumeMounts:
+        - name: data-storage
+          mountPath: /data/booksapi

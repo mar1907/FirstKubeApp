@@ -125,6 +125,6 @@ if __name__ == "__main__":
         conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()
         c.execute('CREATE TABLE IF NOT EXISTS books(id INTEGER, authors TEXT NOT NULL, title TEXT NOT NULL, status TEXT NOT NULL, PRIMARY KEY(id));')
-        app.run(debug=True, port=6666, host="0.0.0.0")
+        app.run(debug=True, port=5040, host="0.0.0.0")
     except Exception as e:
         print('Error: ', e)
