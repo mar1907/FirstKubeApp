@@ -14,7 +14,7 @@ import db_queries
 import requests
 import os
 
-DB_PATH = './data.db'
+DB_PATH = 'mount/data.db'
 URL = os.environ['apiURL'] # "http://0.0.0.0:5035"
 
 app = Flask(__name__)
@@ -121,6 +121,7 @@ def get_search_book_online():
    return data
 
 if __name__ == "__main__":
+    print(os.getcwd())
     try:
         conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()

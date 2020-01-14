@@ -3,10 +3,11 @@ kind: PersistentVolume
 metadata:
   name: books-app-pv
 spec:
+  storageClassName: manual  
   accessModes:
   - ReadWriteMany
   capacity:
-    storage: 1G  
+    storage: 1Gi
   hostPath:
     path: /data/booksapi
 

@@ -15,7 +15,7 @@ spec:
             app: books-client-api-app
     spec:
       volumes:
-      - name: books-vol
+      - name: data-storage
         persistentVolumeClaim:
           claimName: books-pvc
       containers:
@@ -26,4 +26,5 @@ spec:
         - containerPort: 5040
         volumeMounts:
         - name: data-storage
-          mountPath: /data/booksapi
+          mountPath: /booksfrontend/src/mount
+#        command: ["python3", "../main.py"]

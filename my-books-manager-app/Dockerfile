@@ -7,6 +7,7 @@ WORKDIR /booksfrontend/src
 
 COPY requirements.txt /booksfrontend/src
 RUN pip install --no-cache-dir -r requirements.txt
+RUN mkdir -p /booksfrontend/src/mount
 
 COPY . /booksfrontend/src
 

@@ -1,6 +1,6 @@
 import sqlite3
 
-DB_PATH = './data.db'
+DB_PATH = 'mount/data.db'
 NOTSTARTED = 'Not Started'
 INPROGRESS = 'In Progress'
 FINISHED = 'Finished'
