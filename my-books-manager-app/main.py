@@ -12,9 +12,10 @@ import json
 import sqlite3
 import db_queries
 import requests
+import os
 
 DB_PATH = './data.db'
-URL = "http://0.0.0.0:5035"
+URL = os.environ['apiURL'] # "http://0.0.0.0:5035"
 
 app = Flask(__name__)
 

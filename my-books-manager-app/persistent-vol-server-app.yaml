@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: books-app-pv
+spec:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 1G  
+  hostPath:
+    path: /tmp/books-pv
+
