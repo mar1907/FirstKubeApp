@@ -1,4 +1,4 @@
-URL=0.0.0.0:6666
+URL=192.168.99.100:32555
 
 case "$1" in
 	show)
@@ -26,6 +26,6 @@ case "$1" in
 		echo
 		;;
 	*)
-		echo "Usage: ./$0 {show|add|update|delete|status|search}"
+		echo "Usage: $0 {show|add|update|delete|status|search}"
 		exit 1 
 esac
